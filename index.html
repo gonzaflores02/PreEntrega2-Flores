@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Productos</title>
+    <link rel="stylesheet" href="/css/styless.css">
     <script src="/js/main.js"></script>
-    <title>Document</title>
 </head>
 <body>
-    <h1>Suma
-    </h1>
-    <script src="/js/main.js"></script>
+    <div class="container">
+        <h2>Cargar Productos</h2>
+        <div id="alertContainer"></div>
+        <div class="form-group">
+            <label for="nombre">Nombre del producto:</label>
+            <input type="text" id="nombre" placeholder="Nombre del producto">
+        </div>
+        <div class="form-group">
+            <label for="precio">Precio del producto (en ARS):</label>
+            <input type="text" id="precio" placeholder="Precio del producto">
+        </div>
+        <div class="form-group">
+            <label for="stock">Cantidad en stock:</label>
+            <input type="text" id="stock" placeholder="Stock disponible">
+        </div>
+        <div class="form-group">
+            <label for="foto">URL de la imagen del producto:</label>
+            <input type="text" id="foto" placeholder="URL de la imagen">
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="CrearProducto()">Agregar Producto</button>
+        </div>
+
+        <h3>Listado de productos</h3>
+        <div id="listadoProductos">
+            <p>No has agregado ningún producto a tu catálogo.</p>
+        </div>
+    </div>
 </body>
 </html>

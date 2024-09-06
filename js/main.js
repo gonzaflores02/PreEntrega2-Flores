@@ -5,6 +5,100 @@ function Producto(nombre, precio, stock, foto) {
     this.foto = foto;
 }
 
+let productos = [];
+
+function limpiarFormulario() {
+    document.getElementById("nombre").value = "";
+    document.getElementById("precio").value = "";
+    document.getElementById("stock").value = "";
+    document.getElementById("foto").value = "";
+}
+
+function mostrarProducto(){
+    const listado = document.getElementById("listadoProductos");
+
+    listado.innerHTML = "";
+
+    if(productos.length <= 0){
+        listado.innerHTML = "<p>No has agregado ningún producto a tu catálogo.</p>"; 
+    }else{
+        productos.forEach(el => {
+            listado.innerHTML += 
+            `<div class="producto">
+                <img src="${el.foto}" alt="Imagen de ${el.nombre}" class="producto-img">
+                <h3>${el.nombre}</h3>
+                <p>Precio: ${el.precio} $ARS</p>
+                <p>Stock: ${el.stock} unidades</p>
+            </div>`
+            ;})
+    }
+}
+
+function mostrarAlerta(){
+    const alerta = document.getElementById("alertContainer");
+    alerta.innerHTML = `<p class="alert alert-danger">Complete los campos correctamente</p>`
+}
+
+function guardarEnLS(arr){
+    return localStorage.setItem('usuario', JSON.stringify(arr));
+}
+
+function CrearProducto(){
+    let nombre = document.getElementById("nombre").value;
+    let precio = parseFloat(document.getElementById("precio").value);
+    let stock= parseFloat(document.getElementById("stock").value);
+    let foto = document.getElementById("foto").value;
+
+    if(nombre === "" || isNaN(precio) || isNaN(stock) || foto === ""){
+        mostrarAlerta()
+        return
+    }
+
+    const NuevoProducto = new Producto(nombre, precio, stock, foto);
+    productos.push(NuevoProducto);
+    
+
+    
+
+    limpiarFormulario()
+    mostrarProducto()
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function validacionNumero(aValidar) {
     aValidar = parseFloat(aValidar);
     
@@ -15,56 +109,3 @@ function validacionNumero(aValidar) {
     return aValidar;
 }
 
-let productos = [];
-
-while (true) {
-    let pregunta = prompt("Quieres agregar un producto para la venta? Si o No")
-    if (pregunta == "Si" || pregunta == "si" || pregunta == "") {
-        alert("Bien, vamos a agregar los productos");
-        let nombre = prompt("Ingresa el nombre del producto");
-        let precio = parseFloat(prompt("Ingrese el precio del producto:"));
-        precio = validacionNumero(precio);
-        let stock = parseFloat(prompt("Ingresa que cantidad del producto hay disponible"));
-        stock = validacionNumero(stock)
-        let foto = prompt("Ingresa el nombre de la imagen del producto");
-
-        const NuevoProducto = new Producto(nombre, precio, stock, foto)
-        productos.push(NuevoProducto)
-        alert(`El producto que agrego es ${NuevoProducto.nombre}, hay ${NuevoProducto.stock} unidades y su precio es ${NuevoProducto.precio} $ARS`)
-    } else if (pregunta == "No" || pregunta == "no" || pregunta == null) {
-        break;
-    } else {
-        alert(`${pregunta} no es una respuesta válida. Por favor, responde "Si" o "No".`);
-    }
-}
-
-let seguir = true
-function buscar() {
-    let buscarusuario = prompt("Introduce el nombre del producto. Si quiere dejar de buscar presione CANCELAR.")
-    if (buscarusuario == null) {
-        seguir = false
-    } else {
-        const busquedaPorNombre = productos.filter(el => el.nombre.includes(buscarusuario))
-        console.log(busquedaPorNombre);
-
-        if (busquedaPorNombre.length <= 0) {
-            alert("no coincide")
-        } else {
-            busquedaPorNombre.forEach(el => {
-                alert(`Producto: ${el.nombre} \n Precio: ${el.precio} \nStock: ${el.stock}`)
-            })
-        }
-    }
-}
-
-if (productos.length <= 0) {
-    alert("No has agregado ningun producto a tu catalogo")
-} else {
-    let preguntaBuscar = alert("Los productos han sido correctamente agregados al catalogo. Busque sus productos")
-    while (seguir) {
-        buscar()
-    }
-}
-
-
-alert("Hasta aca el script. \nSaludos")
