@@ -40,7 +40,7 @@ h2 {
     text-align: center;
 }
 
-.btn{
+.mi-.form-group button, .form-group-buscar button{
     margin-top: 2rem ;
 }
 
@@ -62,26 +62,6 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* .alert-danger {
-    margin-top: 15px;
-    color: red;
-    text-align: center;
-} */
 
 * {
     box-sizing: border-box;
@@ -129,25 +109,6 @@ input {
     border-radius: 4px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* .alert-danger {
-    margin-top: 15px;
-    color: red;
-    text-align: center;
-} */
 
 .login-button {
     background-color: white;
@@ -207,6 +168,7 @@ h2 {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%;
 }
 
 .form-group button:hover, .form-group-buscar button:hover {
@@ -215,6 +177,7 @@ h2 {
 
 #listadoProductos {
     margin-top: 20px;
+    text-align: center;
 }
 
 .producto {
@@ -254,17 +217,8 @@ h2 {
     border-radius: 5px;
     background-color: #f8d7da;
     color: #721c24;
-    text-align: center;
+    text-align: center;}
 
-/* .alert-success {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.alert-danger {
-    background-color: #f8d7da;
-    color: #721c24;
-} */
 
 #buscarProductoForm {
     margin-top: 20px;

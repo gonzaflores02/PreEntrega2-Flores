@@ -1,0 +1,12 @@
+[
+    {"nombre": "Papa", "precio": 1200, "stock": 100, "foto": "https://saborusa.com.pa/imagesmg/imagenes/5ff3e6a0b703f_potatoes-food-supermarket-agriculture-JG7QGNY.jpg"},
+    {"nombre": "Uva", "precio": 1200, "stock": 100, "foto": "https://cdn.clinicabaviera.com/blog/wp-content/uploads/2017/04/iStock-153009876.jpg"},
+    {"nombre": "Leche", "precio": 250, "stock": 200, "foto": "https://dcdn.mitiendanube.com/stores/001/175/558/products/leche-entera1-52e4dd3e629d0b42ad16835846878274-1024-1024.png"},
+    {"nombre": "Pan", "precio": 500, "stock": 150, "foto": "https://www.abc.com.py/resizer/v2/A3LD3QJRDFEBTD6LAU4L7ZVLNI.jpg?auth=d189182ab95a45563da5567337b2644c61baceabbf4567dd38d70f212b3de246&width=770&smart=true"},
+    {"nombre": "Queso", "precio": 1800, "stock": 80, "foto": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/productos/b/0000019000/19533.jpg"},
+    {"nombre": "Tomate", "precio": 900, "stock": 120, "foto": "https://www.lovemysalad.com/sites/default/files/styles/image_300x206/public/tomates_-_vladimir_morozov.jpg?itok=kL1zBkdt"},
+    {"nombre": "Café", "precio": 2500, "stock": 60, "foto": "https://arcordiezb2c.vteximg.com.br/arquivos/ids/183012/Cafe-Suave-Origens-Nescafe-Dolca-100-Gr-1-18628.jpg?v=638482089727200000"},
+    {"nombre": "Arroz", "precio": 850, "stock": 180, "foto": "https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/fotos/b/0000004000/2719_1.jpg"},
+    {"nombre": "Manzana", "precio": 1100, "stock": 90, "foto": "https://regionnet.com.ar/wp-content/uploads/2021/09/pomme-pink-lady-large.jpg"},
+    {"nombre": "Huevos", "precio": 700, "stock": 140, "foto": "https://www.gba.gob.ar/sites/default/files/desarrolloagrario/newsletter/images/huevos.jpg"}
+]
